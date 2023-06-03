@@ -14,6 +14,8 @@ K – 5 очков; J, X – 8 очков; Q, Z – 10 очков.
 ноутбук
     12'''
 
+# моё решение 
+
 rusAlphabet = {"А" : 1, "В" : 1, "Е" : 1, "И" : 1, "Н" : 1, 
 "О" : 1, "С" : 1, "Р" : 1, "Т" : 1, "Д" : 2, "К" : 2, "Л" : 2, 
 "М" : 2, "П" : 2, "У" : 2, "Б" : 3, "Г" : 3, "Ё" : 3, "Ь" : 3, 
@@ -26,8 +28,9 @@ engAlphabet = {"A" : 1, "E" : 1, "I" : 1, "O" : 1, "U" : 1,
 "F" : 4, "H" : 4, "V" : 4, "W" : 4, "Y" : 4, 
 "K" : 5, "J" : 8, "X" : 8, "Q" : 10, "Z" : 10}
 
-word = str.upper(input('input word: '))
 
+# мое решение
+word = str.upper(input('input word: '))
 if str.upper(word[0]) in rusAlphabet :
     alphabet = rusAlphabet
 elif str.upper(word[0]) in engAlphabet :
@@ -44,3 +47,33 @@ def countPoints(word, alphabet) :
     return(count)
 
 print(countPoints(word, alphabet))
+
+# #1 решение
+
+
+# dictionary = {1:"AEIOULNSTRABEMHOPCT",
+#               2: "DGДКЛМПУ", 
+#               3: "ВСМРБГËЬЯ", 
+#               4:"FHVWYЙЫ", 
+#               5: "КЖЗХЦЧ", 
+#               8: "ЈХШЭЮ", 
+#               10:"QZФЩЬ"}
+
+# word = input('input word: ').upper()
+# sum = 0
+# for letter in word :
+#     for key, value in dictionary.items() :
+#         if i in value :
+#             sum += key
+# print (f"Стоимость слова: {sum}")
+
+# # 2 решение
+
+# word = input('input word: ').upper()
+# res = 0
+# for letter in word : 
+#     if letter in english.keys() :
+#         res += int(english[letter])
+#     elif letter in russian.keys() :
+#         res += int(russian[letter])
+# print(res)
