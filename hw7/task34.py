@@ -12,12 +12,11 @@
     **Вывод:** Парам пам-пам  '''
 
 vowel = ['а', 'у', 'е', 'э', 'ю', 'и', 'я', 'ы', 'о']
-def check(list):
+def check(f, list):
     for i in range(len(list)):
-        if list[i] != list[0]:
-    # if not f(list):
+        if not f(list[i]):
             return('Пам парам')
-        return('Парам пам-пам')
+    return('Парам пам-пам')
 
 phrases = list(input('input line: ').split())
 
@@ -30,9 +29,4 @@ for i in range(len(phrases)):
             kol1 += 1
     kol.append(kol1)
 
-print(check(kol))
-# print(check(lambda x: x == kol[0], kol))
-# for k in kol:
-#     if k!= kol[0]:
-#         return False
-#     return True
+print(check(lambda x: x == kol[0], kol))
